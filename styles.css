@@ -74,6 +74,13 @@ h4 {
     max-width: none;
     height: 100vh;
   }
+
+  .mailchimp-form {
+  /*places form on bottom*/
+  position: fixed;
+  bottom: 8%;
+  width: 100%;
+  }
 }
 
 @media only screen and (min-width: 750px) {
