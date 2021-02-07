@@ -13,7 +13,7 @@
   <div class="background-fullscreen" style="background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(/assets/images/wedancealone.png)">
     <nav style="display: flex; justify-content:space-between;">
       <a href="mailto: hello@dareoskhalili.com" target="_blank">CONTACT</a>
-      <a href="">MAILING LIST</a>
+      <h1 id="toggler" style="color:red" >MAILING LIST</h1>
     </nav>
 
     <div class="text-center">
@@ -24,7 +24,7 @@
 
     <!-- Begin Mailchimp Signup Form -->
     <!-- Stylesheet Import -->
-    <div class="mailchimp-form">
+    <div class="mailchimp-form form-hidden">
       <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 
       <!-- Form Styles -->
@@ -39,12 +39,12 @@
         <form action="https://gmail.us7.list-manage.com/subscribe/post?u=800025b135c2ad1867317c71b&amp;id=4f1c007491" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
             <div style=""id="mc_embed_signup_scroll">
         <!--         <h2>Subscribe</h2> -->
-              <div class="mc-field-group" style="padding: 0 !important; margin: 0 !important; display: flex; justify-content: space-between; align-items: center;">
+              <div class="mc-field-group" style="padding: 0 !important; margin: 0 !important; display: flex; justify-content: space-around; align-items: center;">
         <!--         <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span> </label> -->
-                <input style="height: 30px; padding: 0 12px; border-radius: 15px; border: 1px solid red; color: red; background-color: transparent;" type="email" value="Subscribe to my mailing list" name="EMAIL" class="required email" id="mce-EMAIL">
+                <input style="width: 50%; height: 30px; padding: 0 12px; border-radius: 15px; border: 1px solid red; color: red; background-color: rgba(30, 30, 30, 0.6);" type="email" value="Subscribe to my mailing list" name="EMAIL" class="required email" id="mce-EMAIL">
                               <!-- Submit Button -->
                 <div class="clear" style="padding: 0 !important; margin-left: 20px;">
-                  <input style="height: 30px; padding: 0 12px; border-radius: 15px; color:black; background-color: red;" type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                  <input style="height: 30px; padding: 0 12px; border-radius: 15px; color:black; background-color: red; margin: 0!important;" type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
                 </div>
               </div>
 
@@ -62,13 +62,43 @@
             </div>
         </form>
       </div>
-      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+      <script type='text/javascript'>
+        (function($) {
+          window.fnames = new Array();
+          window.ftypes = new Array();
+          fnames[0]='EMAIL';
+          ftypes[0]='email';
+          fnames[1]='FNAME';
+          ftypes[1]='text';
+          fnames[2]='LNAME';
+          ftypes[2]='text';
+          fnames[3]='ADDRESS';
+          ftypes[3]='address';
+          fnames[4]='PHONE';
+          ftypes[4]='phone';
+          fnames[5]='BIRTHDAY';
+          ftypes[5]='birthday';
+        }
+
+        (jQuery));
+
+        var $mcj = jQuery.noConflict(true);
+      </script>
       <!--End mc_embed_signup-->
-          </div>
+      </div>
 
   </div>
 
+<script type='text/javascript'>
+  const toggler = document.querySelector("#toggler")
+  const subForm = document.querySelector(".mailchimp-form")
 
+  toggler.addEventListener("click", event => {
+    console.log("It Works")
+    subForm.classList.toggle("form-hidden");
+  })
+</script>
 <!-- JQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
           integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
