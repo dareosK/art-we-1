@@ -36,8 +36,14 @@ body {
   width: 100%;
 }
 
+#b3 {
+  text-decoration: none;
+  color: #323232;
+  font-weight: bold;
+}
 /*ABOUT PAGE*/
 .background-about {
+  text-align: justify;
   width: 900px;
   margin: 72px auto;
   color: #323232;
@@ -161,6 +167,11 @@ body {
 }
 
 @media only screen and (max-width: 750px) {
+
+  .background-about {
+    width: 85%;
+  }
+
 
   .text-center {
     top: 70%;
