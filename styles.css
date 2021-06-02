@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #040002;
+  background-color: #F8F8F8;
 }
 
 .button:hover{
@@ -17,7 +17,7 @@ body {
 
 .text-center {
   position: absolute;
-  top: 50%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: red;
@@ -36,6 +36,57 @@ body {
   width: 100%;
 }
 
+/*ABOUT PAGE*/
+.background-about {
+  width: 900px;
+  margin: 72px auto;
+  color: #323232;
+  margin-bottom: 264px;
+  /*background-color: purple;*/
+}
+
+.background-about h1{
+  color: red;
+}
+
+.background-about ul {
+  list-style: none;
+  padding: 0;
+}
+
+.background-about li {
+  line-height: 1.4;
+}
+
+.upcoming-show {
+  text-align: left;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 16px 32px ;
+  border: 1px dotted red;
+  border-radius: 8px;
+}
+
+.upcoming-show p {
+  margin: 0;
+}
+
+#upcoming {
+  text-decoration: none;
+  width: 100px;
+}
+
+#upcoming-img {
+  width: 300px;
+  height: auto;
+  border: 1px dotted red;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  padding-top: 8px ;
+}
+
+/*NAVBAR*/
+
 nav {
   padding: 10px 10px 10px 10px;
   border-bottom: 1px solid red;
@@ -52,17 +103,36 @@ nav h1 {
   font-size: 0.9rem;
 }
 
-nav, h1 {
+nav, h1, h2 {
   font-family: 'Archivo Black', sans-serif;
 }
 
-h4 {
+h2 {
+  font-weight: bold;
+}
+
+.nav-inline {
+  list-style: none;
+}
+
+ul.nav-inline {
+  margin: 0;
+}
+
+.nav-inline li {
+    display: inline-block;
+    margin-left: 16px;
+}
+
+/*GENERAL*/
+
+body {
   font-family: 'Roboto', sans-serif;
 }
 
-  #text-small{
-    font-size: 1.4rem;
-  }
+#text-small{
+  font-size: 1.4rem;
+}
 
 @media only screen and (max-width: 750px) and (orientation: portrait) {
 
@@ -87,5 +157,12 @@ h4 {
 
   nav a, nav h1 {
     font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+
+  .text-center {
+    top: 70%;
   }
 }
