@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #040002;
+  background-color: #F8F8F8;
 }
 
 .button:hover{
@@ -36,6 +36,30 @@ body {
   width: 100%;
 }
 
+/*ABOUT PAGE*/
+.background-about {
+  width: 900px;
+  margin: 72px auto;
+  color: #323232;
+  margin-bottom: 264px;
+  /*background-color: purple;*/
+}
+
+.background-about h1{
+  color: red;
+}
+
+.background-about ul {
+  list-style: none;
+  padding: 0;
+}
+
+.background-about li {
+  line-height: 1.4;
+}
+
+/*NAVBAR*/
+
 nav {
   padding: 10px 10px 10px 10px;
   border-bottom: 1px solid red;
@@ -56,7 +80,7 @@ nav, h1 {
   font-family: 'Archivo Black', sans-serif;
 }
 
-h4 {
+body {
   font-family: 'Roboto', sans-serif;
 }
 
