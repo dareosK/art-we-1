@@ -73,6 +73,7 @@ body {
 
 #upcoming {
   text-decoration: none;
+  width: 100px;
 }
 
 #upcoming-img {
