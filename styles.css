@@ -159,4 +159,9 @@ body {
   }
 }
 
+@media only screen and (max-width: 750px) {
 
+  .text-center {
+    top: 70%;
+  }
+}
