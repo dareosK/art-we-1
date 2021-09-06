@@ -98,7 +98,6 @@ body {
   border: 1px dotted red;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 8px;
-  padding-top: 8px ;
 }
 
 /*NAVBAR*/
@@ -129,6 +128,8 @@ h2 {
 
 .nav-inline {
   list-style: none;
+  display:  flex;
+  align-items: center;
 }
 
 ul.nav-inline {
