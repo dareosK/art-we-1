@@ -1,18 +1,149 @@
 ---
 layout: default
-title: Dareos Khalili - about
+title: Dareos Khalili -Deformations
 ---
-<div class="background-fullscreen" title="cover of Dareos Khalili - We Dance Alone, with rain puddle morphing effect" style="background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://res.cloudinary.com/dlf53umtd/image/upload/v1622537960/Website/dareos-khalili-wedancealone_gbzm3y.png)">
+<div class="background-fullscreen">
   <nav style="display: flex; justify-content: space-between;">
     <a style="margin-left: 26px;" href="/">DAREOS KHALILI</a>
     <ul style="margin-right: 26px;" class="nav-inline">
       <li><a href="/about.html">About</a></li>
-      <li><a href="www.dareoskhalili.com/works.html">Works</a></li>
+      <li><a href="/works.html">Works</a></li>
       <!-- <li><a href="www.dareoskhalili.com/store.html">STORE</a></li> -->
       <!-- <li><a href="www.dareoskhalili.com/blog.html">BLOG</a></li> -->
     </ul>
   </nav>
 
+  <div class="reel deformations-reel">
+    <div class="works-navigation">
+      <h1 style="padding-left: 36px;">Deformations</h1>
+      <p class="works-description"></p>
+      <a href="/works.html" class="works-link works-link-active">Deformations</a>
+      <a href="/works-2.html" class="works-link">We Dance Alone</a>
+      <a href="/works-3.html" class="works-link">to Cover the Silence</a>
+    </div>
+    <img src="assets/images/works/dareos_khalili_deformations_01.jpg" alt="">
+    <img src="assets/images/works/dareos_khalili_deformations_02.jpg" alt="">
+    <img src="assets/images/works/dareos_khalili_deformations_03.jpg" alt="">
+    <img src="assets/images/works/dareos_khalili_deformations_04.jpg" alt="">
+    <img src="assets/images/works/dareos_khalili_deformations_05.jpg" alt="">
+    <img src="assets/images/works/dareos_khalili_deformations_06.jpg" alt="">
+    <img src="assets/images/works/dareos_khalili_deformations_07.jpg" alt="">
+  </div>
+
 
 
 </div>
+
+<style type="text/css">
+  .works-link {
+    text-decoration: none;
+    color: red;
+    font-size: 0.9rem;
+    width: 140px;
+    justify-content: center;
+    display: flex;
+  }
+
+  .works-link-active {
+    background-color: red;
+    color: white;
+    background-color: red;
+  }
+
+  .works-navigation {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .works-link {
+    margin-left: 36px;
+  }
+
+  .reel {
+    /* ↓ Custom properties for ease of adjustment */
+    --space: 1rem;
+    --color-light: #fff;
+    --color-dark: #000;
+    --reel-height: 95vh;
+    --item-width: 25ch;
+    display: flex;
+    height: var(--reel-height);
+    /* ↓ Overflow */
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* ↓ For Firefox */
+    scrollbar-color: var(--color-light) var(--color-dark);
+  }
+
+  .reel > * {
+    /*
+    ↓ Just a `width` wouldn’t work because
+    `flex-shrink: 1` (default) still applies
+    */
+    flex: 0 0 var(--item-width);
+  }
+
+  .reel > img {
+    /* ↓ Reset for images */
+    height: 97%;
+    flex-basis: auto;
+    width: auto;
+  }
+  .reel > * + * {
+    margin-left: var(--space);
+    margin-top: var(--space);
+    margin-bottom: var(--space);
+  }
+  .reel.overflowing {
+    /* ↓ Only apply if there is a scrollbar (see the JavaScript) */
+    padding-bottom: var(--space);
+  }
+
+  /* ↓ Hide scrollbar with `no-bar` class */
+  .reel.no-bar {
+    scrollbar-width: none;
+  }
+  .reel.no-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /*MOBILE PORTRAIT*/
+  @media screen and (max-width: 600px) and (orientation:portrait) {
+    .works-navigation {
+      align-items:  center;
+      justify-content:  center;
+      /*width: 200px;*/
+    }
+
+    .reel{
+      flex-direction: column;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    .reel > * + * {
+      margin-left: 0;
+      margin-top: 0;
+      margin-bottom: var(--space);
+    }
+
+    .reel > img {
+      height: auto;
+      width:  100%;
+      margin-left: 0;
+    }
+  }
+
+  /*MOBILE LANDSCAPE*/
+  @media screen and (min-device-width: 481px) and (orientation:landscape) {
+    .reel > * + * {
+      margin-left: var(--space);
+      margin-top: 0;
+      margin-bottom: var(--space);
+    }
+
+    .works-navigation > h1 {
+      font-size: 18px;
+    }
+  }
+</style>
