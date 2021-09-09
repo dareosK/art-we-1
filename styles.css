@@ -287,6 +287,9 @@ body {
       justify-content:  center;
       /*width: 200px;*/
     }
+    #silence-margin {
+      margin-left:  36px;
+    }
 
     .works-navigation > h1 {
       padding-left: 0 !important;
