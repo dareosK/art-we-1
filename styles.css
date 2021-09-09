@@ -42,14 +42,17 @@ body {
   color: #323232;
   font-weight: bold;
 }
+
 /*ABOUT PAGE*/
 .background-about {
   /*text-align: justify;*/
   line-height: 1.4;
-  width: 900px;
+  /*width: 900px;*/
   margin: 72px auto;
   color: #323232;
   margin-bottom: 264px;
+  padding-right:  2rem;
+  padding-left:  2rem;
 }
 
 .background-about h1{
@@ -196,3 +199,132 @@ body {
     top: 60%;
   }
 }
+
+/*WORKS PAGES*/
+.poem {
+    width: 200px;
+  }
+  .works-link {
+    text-decoration: none;
+    color: red;
+    font-size: 0.9rem;
+    width: 140px;
+    justify-content: center;
+    display: flex;
+  }
+
+  .works-link-active {
+    background-color: red;
+    color: white;
+    background-color: red;
+  }
+
+  .works-navigation {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .works-navigation > h1 {
+      padding-left: 36px;
+    }
+
+  .works-link {
+    margin-left: 36px;
+  }
+
+  .reel {
+    /* ↓ Custom properties for ease of adjustment */
+    --space: 1rem;
+    --color-light: #fff;
+    --color-dark: #000;
+    --reel-height: 95vh;
+    --item-width: 25ch;
+    display: flex;
+    height: var(--reel-height);
+    /* ↓ Overflow */
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* ↓ For Firefox */
+    scrollbar-color: var(--color-light) var(--color-dark);
+  }
+
+  .reel > * {
+    /*
+    ↓ Just a `width` wouldn’t work because
+    `flex-shrink: 1` (default) still applies
+    */
+    flex: 0 0 var(--item-width);
+  }
+
+  .reel > img {
+    /* ↓ Reset for images */
+    height: 97%;
+    flex-basis: auto;
+    width: auto;
+  }
+  .reel > * + * {
+    margin-left: var(--space);
+    margin-top: var(--space);
+    margin-bottom: var(--space);
+  }
+  .reel.overflowing {
+    /* ↓ Only apply if there is a scrollbar (see the JavaScript) */
+    padding-bottom: var(--space);
+  }
+
+  /* ↓ Hide scrollbar with `no-bar` class */
+  .reel.no-bar {
+    scrollbar-width: none;
+  }
+  .reel.no-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /*MOBILE PORTRAIT*/
+  @media screen and (max-width: 600px) and (orientation:portrait) {
+    .works-navigation {
+      align-items:  center;
+      justify-content:  center;
+      /*width: 200px;*/
+    }
+
+    .works-navigation > h1 {
+      padding-left: 0 !important;
+    }
+
+    .reel{
+      flex-direction: column;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    .works-link {
+      margin-left: 0;
+    }
+
+    .reel > * + * {
+      margin-left: 0;
+      margin-top: 0;
+      margin-bottom: var(--space);
+    }
+
+    .reel > img {
+      height: auto;
+      width:  100%;
+      margin-left: 0;
+    }
+
+  }
+
+  /*MOBILE LANDSCAPE*/
+  @media screen and (min-device-width: 481px) and (orientation:landscape) {
+    .reel > * + * {
+      margin-left: var(--space);
+      margin-top: 0;
+      margin-bottom: var(--space);
+    }
+
+    .works-navigation > h1 {
+      font-size: 18px;
+    }
+  }
